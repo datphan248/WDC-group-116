@@ -11,7 +11,7 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="p-3 mb-2 bg-light text-dark">
     <h1> Sign up to our COVID-19 Contact Tracing Site! </h1>
 
     <hr>
@@ -54,37 +54,43 @@
 
 
     <br>
+        <p> Are you an event manager? <br> If yes, please fill in the information below. <br> If no, click 'Sign Up'. </p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="yes">
+            <label class="form-check-label" for="flexRadioDefault1"> Yes </label>
+        </div>
 
-    <label class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description"> Are you a venue manager? </span>
-    </label>
-
-    </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2"> No </label>
+        </div>
 
     <!-- Venue Manager -->
-    <div class="venue_manager">
+    <div id="venue_manager">
 
         <div class="venue_name">
             <label for="exampleFormControlInput1" class="form-label">Venue Name</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your venue name">
         </div>
-
+        <br>
+        <div class="contact_no">
+            <label for="exampleFormControlInput1" class="form-label">Contact Number</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your contact number">
+        </div>
+        <br>
+        <div class="contact_no">
+            <label for="exampleFormControlInput1" class="form-label"> Address </label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Address Line 1">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Address Line 2">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Suburb">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Postcode">
+        </div>
 
     </div>
-
-
-
+    <br>
+    <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='/home.html';"> SIGN UP </button>
 
     </div>
-
-    <button type="button" class="btn btn-primary btn-lg"> SIGN UP </button>
-
-
-
-
-
 
     <!-- Optional JavaScript; choose one of the two! -->
 

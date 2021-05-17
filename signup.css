@@ -4,6 +4,7 @@ h1 {
 
 body {
     text-align: center;
+    color: #7FDBFF;
 }
 
 .form {
@@ -30,6 +31,13 @@ label {
     width: 220px;
 }
 
-.venue_manager {
-    display: none;
+#venue_manager {
+    display: block;
+}
+
+.btn btn-primary btn-lg {
+    display: block;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
 }

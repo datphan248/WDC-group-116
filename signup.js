@@ -10,3 +10,15 @@ $(function(){
         return new Date().toJSON().split('T')[0];
     });
 });
+
+$(document).ready(function() {
+   $('input[type="radio"]').click(function() {
+       if($(this).attr('id') == 'yes') {
+            $('#venue_manager').show();
+       }
+       else {
+            $('#venue_manager').hide();
+       }
+   });
+});
+
