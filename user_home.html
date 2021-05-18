@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="sam.css">
+    <link rel="stylesheet" href="stylesheets/sam.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/user_account.css">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -21,7 +22,7 @@
     <!-- Vue JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
-    <script src=sam.js></script>
+    <script src=javascripts/sam.js></script>
 
 
 
@@ -32,41 +33,68 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">covidCheck</a>
+            <a class="navbar-brand" href="#">Covid Check</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Check-In</a>
+                        <a class="nav-link" href="user_check_in.html">Check-In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Check-In History</a>
+                        <a class="nav-link" href="#">|</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Map</a>
+                        <a class="nav-link" href="user_map.html">Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Settings</a>
+                        <a class="nav-link" href="#">|</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="user_check_in_history.html">My check-in history</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">|</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_account.html">My account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">|</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <nav class="bread" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+
     <!-- Big check in button -->
-    <div onClick="parent.location='check_in.html'" class="centeredBox">
+    <div class="centeredBox">
         <h3>Covid 19 Check-in</h3>
-        <img src="sampleQR.png" style="width:50px;height:50px;" alt="QR image">
-        <button type="button" class="btn btn-primary btn-lg">Check In</button>
+        <img src="images/sampleQR.png" style="width:50px;height:50px;" alt="QR image">
+        <button type="button" onClick="parent.location='user_check_in.html'" class="btn btn-primary btn-lg">Check In</button>
         <br>
     </div>
 
-    <br>
+
+    <!-- you have corona!!!!! 
+    <div class="centeredBox imageLeft" style="border: 3px solid red;">
+        <img src="alert.png" style="width:50px;height:50px;" alt="QR image">
+        <div class="card-body">
+            <h5 class="card-title">Warning!</h5>
+            <p class="card-text">A recent location you have visited has been marked a Covid hotspot by a health official. Click here to review recent locations you have been to</p>
+            <a href="#" class="btn btn-primary">Button</a>
+        </div>
+    </div> -->
 
     <!-- Covid figures -->
     <div class="centeredBox">
