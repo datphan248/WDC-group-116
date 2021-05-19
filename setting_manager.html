@@ -6,48 +6,50 @@
     <title>User setting</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="setting.css">
+
     <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   </head>
 
 <body>
-  <ul class="nav justify-content-center">
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Covid 19 Contact Tracking</a>
-      </li>
-      <!--      <li class="nav-item">-->
-      <!--        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-      <!--      </li>-->
-  </ul>
-
-  <ul class="nav nav-tabs">
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">Check-In History</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">Hot-spot Areas</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">FAQs</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-      </li>
-      <!--      <li class="nav-item">-->
-      <!--        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-      <!--      </li>-->
-  </ul>
-  <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">User Setting</li>
-      </ol>
+  <!-- User Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="user_home.html">covidCheck</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="check_in.html">Check-In</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="check-in-history.html">Check-In History</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="hotspots.html">Hot-spot Areas</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="setting.html">Settings</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Logout</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
   </nav>
-  <br> <br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Settings</li>
+    </ol>
+</nav>
 
+<br> <br>
 <div class="container light-style flex-grow-1 container-p-y">
 
     <h4 class="font-weight-bold py-3 mb-4">
@@ -156,7 +158,7 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
                           </div>
                         </div>
                       </div>
@@ -200,7 +202,6 @@
       <button type="button" class="btn btn-default">Cancel</button>
     </div>
 
-  </div>
 
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
