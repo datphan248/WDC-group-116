@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="stylesheets/sam.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/user_account.css">
+
+    <!-- Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 4-->
+    <!-- we need both because some of us used code from 4 and some of us used code from 5, was breaking some functionality-->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script src=javascripts/sam.js></script>
+
+    <title>Check In</title>
+</head>
+
+<body onload="getDate()">
+
+    <!-- NAVBAR INSERT INTO EACH PAGE-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="user_home.html">Covid Check</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Check-In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_map.html">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_check_in_history.html">My check-in history</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_account.html">My account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="bread" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="user_home.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="user_check_in.html">Check-in</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Success</li>
+        </ol>
+    </nav>
+
+    <div class="centeredBox">
+        <img src="images/hotspot.png" style="width:200px;height:200px" class="center" alt="QR image">
+        <h1 class="center">Hotspot confirmed</h1>
+        <br>
+        <br>
+        <p class="blackCentered">You have successfully added a new hotspot</p>
+        <p class="greyCentered">Placeholder for location</p>
+        <br>
+        <p class="blackCentered">Updated at: </p>
+        <p id="current_time" style="text-align: center; color:grey">Current time</p>
+        <br>
+        <button type="button" onClick="parent.location='admin_home.html'" class="btn btn-primary btn-lg" style="margin-left: auto; margin-right: auto; display: block;">Return to homepage</button>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
