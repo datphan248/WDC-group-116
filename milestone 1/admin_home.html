@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="stylesheets/sam.css">
+
+    <!-- Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 4-->
+    <!-- we need both because some of us used code from 4 and some of us used code from 5, was breaking some functionality-->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+
+
+    <title>Home (Admin)</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="admin_">Covid Check Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin_check_in_database.html">Check-in history database</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin_venues_hotspots.html">Manage Venues & Hotspots</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin_manage_other_accounts.html">Manage users and admin accounts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin_map.html">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin_account.html">My account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="bread" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+
+    <!-- Covid figures -->
+    <div class="centeredBox">
+        <h3>Official covid figures for (date)</h3>
+        <br>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td style="font-weight: 600;">New cases</td>
+                    <td>(num new cases)</td>
+                    <td style="font-weight: 600;">Hotspot locations</td>
+                    <td>(some number)</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-weight: 600;">Active cases</td>
+                    <td>(some number)</td>
+                    <td style="font-weight: 600;">Total cases</td>
+                    <td>(some number)</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Recent active cases -->
+    <div class="centeredBox">
+        <h3>Recent active cases</h3>
+        <!-- placeholder for recent -->
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <td style="font-weight: 600;">Name</td>
+                    <td style="font-weight: 600;">Current location</td>
+                    <td style="font-weight: 600;">Positive test date</td>
+                    <td style="font-weight: 600;">Recent vists</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Antony Cameron</td>
+                    <td>Hotel quarantine</td>
+                    <td>29/03/2021</td>
+                    <td>Norwood cinemas</td>
+
+                </tr>
+                <tr>
+                    <td>John Adams</td>
+                    <td>Hotel quarantine</td>
+                    <td>29/03/2021</td>
+                    <td>Norwood cinemas</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br>
+    </div>
+
+
+
+
+</body>
+
+</html>
