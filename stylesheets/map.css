@@ -1,3 +1,16 @@
+/* mapbox */
+
+#map { 
+    position:sticky; 
+    top: 0; 
+    bottom: 0; 
+    height:70vh;
+    width: 70vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*! `Boldstrap` Bootstrap 4 theme */
 
 @import url(https://fonts.googleapis.com/css?family=Yantramanav:200,300,400,700);
@@ -108,7 +121,7 @@ abbr[data-original-title] {
     text-decoration: underline dotted;
     cursor: help;
     border-bottom: 0;
-  /*  text-decoration-skip-ink: none */
+    text-decoration-skip-ink: none
 }
 
 address {
@@ -1439,7 +1452,7 @@ textarea.form-control.is-invalid {
 
 a.btn.disabled,
 fieldset:disabled a.btn {
-/*    pointer-events: none */
+    pointer-events: none
 }
 
 .btn-primary {
@@ -2077,7 +2090,7 @@ fieldset:disabled a.btn {
 .btn-link:disabled,
 .btn-link.disabled {
     color: #6c757d;
-/*    pointer-events: none */
+    pointer-events: none
 }
 
 .btn-lg,
@@ -2373,7 +2386,7 @@ input[type="button"].btn-block {
 .dropdown-item.disabled,
 .dropdown-item:disabled {
     color: #6c757d;
-/*    pointer-events: none; */
+    pointer-events: none;
     background-color: transparent
 }
 
@@ -2516,7 +2529,7 @@ input[type="button"].btn-block {
 .btn-group-toggle>.btn-group>.btn input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
-/*    pointer-events: none */
+    pointer-events: none
 }
 
 .input-group {
@@ -2770,7 +2783,7 @@ input[type="button"].btn-block {
     display: block;
     width: 1rem;
     height: 1rem;
-/*    pointer-events: none; */
+    pointer-events: none;
     content: "";
     background-color: #fff;
     border: #adb5bd solid 1px
@@ -2831,7 +2844,7 @@ input[type="button"].btn-block {
 .custom-switch .custom-control-label::before {
     left: -2.25rem;
     width: 1.75rem;
-/*    pointer-events: all; */
+    pointer-events: all;
     border-radius: .5rem
 }
 
@@ -3179,7 +3192,7 @@ input[type="button"].btn-block {
 
 .nav-link.disabled {
     color: #6c757d;
-/*    pointer-events: none; */
+    pointer-events: none;
     cursor: default
 }
 
@@ -3978,7 +3991,7 @@ input[type="button"].btn-block {
 
 .page-item.disabled .page-link {
     color: #6c757d;
-/*    pointer-events: none; */
+    pointer-events: none;
     cursor: auto;
     background-color: #fff;
     border-color: #dee2e6
@@ -4459,7 +4472,7 @@ a.badge-dark.focus {
 .list-group-item.disabled,
 .list-group-item:disabled {
     color: #6c757d;
-/*    pointer-events: none; */
+    pointer-events: none;
     background-color: #fff
 }
 
@@ -4782,7 +4795,7 @@ button.close {
 }
 
 a.close.disabled {
-/*    pointer-events: none */
+    pointer-events: none
 }
 
 .toast {
@@ -4793,7 +4806,7 @@ a.close.disabled {
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-/*    backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
     opacity: 0;
     border-radius: .25rem
 }
@@ -4854,7 +4867,7 @@ a.close.disabled {
     position: relative;
     width: auto;
     margin: .5rem;
-/*    pointer-events: none */
+    pointer-events: none
 }
 
 .modal.fade .modal-dialog {
@@ -4927,7 +4940,7 @@ a.close.disabled {
     display: flex;
     flex-direction: column;
     width: 100%;
-/*    pointer-events: auto; */
+    pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -8654,7 +8667,7 @@ button.bg-dark:focus {
     bottom: 0;
     left: 0;
     z-index: 1;
-/*    pointer-events: auto; */
+    pointer-events: auto;
     content: "";
     background-color: rgba(0, 0, 0, 0)
 }
