@@ -6,10 +6,12 @@
     <title>Login</title>
 
     <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="186202105193-e1gugmmcjdqd168mn3hr2a09ijnkebgg.apps.googleusercontent.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/login.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body id="body">
@@ -27,6 +29,7 @@
 
             <button type="button" onclick="window.location.href='user_home.html';">Login</button>
             <button type="button" onclick="window.location.href='signup.html';"> Sign Up </button>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </div>
 
 
