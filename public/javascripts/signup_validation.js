@@ -6,50 +6,79 @@ function signup() {
     var email = document.getElementById('email').value;
     var mobileNumber = document.getElementById('mob_number').value;
     var accountCreationTime = new Date();
+    var venue_1 = document.getElementById('address1').value;
+    var venue_2 = document.getElementById('address2').value;
+    var suburb = document.getElementById('suburb').value;
+    var postcode = document.getElementById('postcode').value;
 
-    if (isNaN(first_name) == true && isNaN(last_name) == true && isNaN(mobileNumber) == false) {
-      alert("Signup Successful!");
-      location.href = "user_home.html";
+    if (isNaN(first_name) == false && isNaN(last_name) == false && isNaN(mobileNumber) == true) {
+      alert("Invalid input. Please check again.");
+      location.href = "signup.html";
     }
 
-    if (first_name == "" || last_name == "" || date_of_birth == "" || email == "" || mobileNumber == "") {
+    else if (first_name == "" || last_name == "" || date_of_birth == "" || email == "" || mobileNumber == "") {
       alert("Signup failed. Some input fields are empty.");
       location.href = "signup.html";
     }
 
-    else {
-      alert("Signup failed. Please check that the information you have entered is valid and correct.");
+    else if (document.getElementById('yes').checked == true) {
+      if (venue_1 == "" || venue_2 == "" || suburb == "" || postcode == "") {
+        alert("Venue managers must fill in information about their business.");
+        location.href = "signup.html";
+      }
+    }
+
+    else if (document.getElementById('yes').checked == false && document.getElementById('no').checked == false) {
+      alert("Please confirm if you are a venue manager.");
       location.href = "signup.html";
+    }
+
+    else {
+      alert("Signup successful!");
+      location.href = "user_home.html";
     }
 
     return false;
 
 }
 
+ function passwordStrength(password) {
 
-function strength_check() {
+      var rating = [
+          0, "<font color='black'> Weak </font>",
+          25, "<font color='red'> Good </font>",
+          50, "<font color='#FF8C00'> Medium </font>",
+          75, "<font color='blue'> Strong </font>",
+          100, "<font color='green'> Very Strong </font>"
+      ];
 
-      if (document.getElementById("password").value != NULL) {
-        var str = document.getElementById("password").value;
-      }
+     var score = 0;
+     var pass = "";
 
-      var strength = document.getElementById("StrengthDisp").value;
+     if (password.length > 8) {
+         score += 25;
+     }
+     if ((password.match(/[a-z]/)) && (password.match(/[A-Z]/))) {
+         score += 25;
+     }
+     if (password.match(/.[,!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)) {
+         score += 25;
+     }
+     if (password.match(/[0-9]/)) {
+         score += 25;
+     }
+     if (password.match(/d+/)) {
+         score += 10;
+     }
 
-      while (str != NULL) {
-            if (str.length == 0) {
-              strength.innerHTML = "Weak";
-              strength.style.color = "yellow";
-            }
-
-            if (str.length > 4 && str.length <= 6) {
-              strength.innerHTML = "Medium";
-              strength.style.color = "yellow";
-            }
-            if (str.length > 8 &&  isNaN(str) != false) {
-              strength.innerHTML = "Strong";
-              strength.style.color = "green";
-            }
-      }
-
-
+     for (var i = rating.length - 1; i >= 0; i -= 1) {
+         if (score >= rating[i]) {
+             pass = rating[i +1];
+             break;
+         }
+     }
+     document.getElementById("passwordDescription").innerHTML = "<b>" + pass + score + "</font></b>";
+     document.getElementById("passwordStrength").className = "strength" + score;
 }
+
+

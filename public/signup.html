@@ -53,8 +53,13 @@
         <!-- Password -->
         <div class="form-group">
             <label for="inputPassword4">What's your password?</label>
-            <input onchange="strength_check()" type="password" id="passEntry" class="form-control passwordInput" placeholder="Enter your password" required>
-            <span id="StrengthDisp" class="badge displayBadge"> Weak </span>
+            <div for="inputPassword4">
+            <small><i> Aim for a score of 100 by using
+            a mix of <br>uppercase/lowercase letters,
+            symbols and numbers! </i></small>
+            </div>
+            <input onkeydown="passwordStrength(this.value);" type="password" id="passEntry" class="form-control passwordInput" placeholder="Enter your password" required>
+            <span id="passwordStrength" class="strength0"><span id = "passwordDescription"><br/>
         </div>
 
         <!-- Radio button for event manager -->
@@ -66,7 +71,7 @@
         </div>
 
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="no">
             <label class="form-check-label" for="flexRadioDefault2"> No </label>
         </div>
 
