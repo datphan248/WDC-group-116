@@ -33,19 +33,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
-    <style>
-        /* body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        } */
-
+    <!-- <style>
         .marker {
             background-image: url('images/mapbox-icon.png');
             background-size: cover;
@@ -63,7 +51,7 @@
             text-align: center;
             font-family: 'Open Sans', sans-serif;
         }
-    </style>
+    </style> -->
 
     <title>Map</title>
 </head>
@@ -148,7 +136,7 @@
             zoom: 9 // starting zoom
         });
 
-        // code from the next step will go here!
+        // red dot
         var geojson = {
             type: 'FeatureCollection',
             features: [{
@@ -159,7 +147,7 @@
                 },
                 properties: {
                     title: 'Mapbox',
-                    description: 'marker 1'
+                    description: '04/04/21 John Smith '
                 }
             },
             {
@@ -183,11 +171,9 @@
                     title: 'Mapbox',
                     description: 'marker 3'
                 }
-            }
-            ]
+            }]
         };
 
-        // add markers to map
         geojson.features.forEach(function (marker) {
 
             // create a HTML element for each feature
@@ -201,6 +187,38 @@
                     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
                 .addTo(map);
         });
+
+
+        // hotspot marker
+        var geojson_hotspot = {
+            type: 'FeatureCollection',
+            features: [{
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [138.5982, -34.9285]
+                },
+                properties: {
+                    title: 'Mapbox',
+                    description: '04/04/21 John Smith '
+                }
+            }]
+        };
+
+        geojson_hotspot.features.forEach(function (marker) {
+
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker_hotspot';
+
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                .addTo(map);
+        });
+
     </script>
 
 
