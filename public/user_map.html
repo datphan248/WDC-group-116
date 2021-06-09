@@ -29,11 +29,48 @@
     <script src="javascripts/map.js"></script>
 
     <!-- Mapbox -->
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' /> -->
 
-    <title>Map</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: sticky;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .marker {
+            background-image: url('images/mapbox-icon.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .mapboxgl-popup {
+            max-width: 200px;
+        }
+
+        .mapboxgl-popup-content {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+
+    <title>jjj</title>
 </head>
 
 <body>
@@ -108,10 +145,10 @@
 
 
 
-    <div id='map' onload="mapboxReize()" ></div>
-        <script>
+    <div id='map' onload="mapboxReize()"></div>
+    <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2FteWluOTkiLCJhIjoiY2twM2E3amdpMDR3ZTJucHQ1ZDB6d29yZSJ9.SbAKqSYFa62av0wWrmrh2A';
-        
+
         var map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -120,8 +157,60 @@
             zoom: 9 // starting zoom
         });
 
-        
-        </script>
+        // code from the next step will go here!
+        var geojson = {
+            type: 'FeatureCollection',
+            features: [{
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [138.612458, -34.941537]
+                },
+                properties: {
+                    title: 'Mapbox',
+                    description: 'marker 1'
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [138.619434, -34.914490]
+                },
+                properties: {
+                    title: 'Mapbox',
+                    description: 'marker 2'
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [138.580061, -34.923043]
+                },
+                properties: {
+                    title: 'Mapbox',
+                    description: 'marker 3'
+                }
+            }
+            ]
+        };
+
+        // add markers to map
+        geojson.features.forEach(function (marker) {
+
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker';
+
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                .addTo(map);
+        });
+    </script>
     <br>
 
 

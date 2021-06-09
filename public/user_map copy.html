@@ -29,26 +29,29 @@
     <script src="javascripts/map.js"></script>
 
     <!-- Mapbox -->
-    <!-- <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' /> -->
-
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
     <style>
-        body {
+        /* body {
             margin: 0;
             padding: 0;
-        }
+        }*/
 
         #map {
-            position: sticky;
+            position: absolute;
             top: 0;
             bottom: 0;
             width: 100%;
+            position: sticky;
+            top: 0;
+            bottom: 0;
+            height: 70vh;
+            width: 70vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .marker {
@@ -70,7 +73,7 @@
         }
     </style>
 
-    <title>jjj</title>
+    <title>Map</title>
 </head>
 
 <body>
@@ -141,10 +144,6 @@
 
 
     <!-- Interactive map-->
-
-
-
-
     <div id='map' onload="mapboxReize()"></div>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2FteWluOTkiLCJhIjoiY2twM2E3amdpMDR3ZTJucHQ1ZDB6d29yZSJ9.SbAKqSYFa62av0wWrmrh2A';
@@ -207,10 +206,13 @@
             new mapboxgl.Marker(el)
                 .setLngLat(marker.geometry.coordinates)
                 .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
                 .addTo(map);
         });
     </script>
+
+
+
     <br>
 
 
