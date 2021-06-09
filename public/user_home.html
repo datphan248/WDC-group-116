@@ -23,12 +23,10 @@
 
     <script src=javascripts/sam.js></script>
 
-
-
     <title>Home</title>
 </head>
 
-<body onload="appendDate()">
+<body onload="getDate()">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
@@ -86,7 +84,7 @@
 
 
     <!-- you have corona!!!!! -->
-    <div class="centeredBox imageLeft" style="border: 3px solid red;">
+    <div style="display:none;" class="centeredBox imageLeft" style="border: 3px solid red;">
         <img src="images/alert.png" style="width:50px;height:50px;" alt="QR image">
         <div class="card-body">
             <h5 class="card-title">Warning!</h5>
@@ -96,8 +94,8 @@
     </div>
 
     <!-- Covid figures -->
-    <div class="centeredBox">
-        <h3 id="append_time">Official covid figures for </h3>
+    <div class="centeredBox" onload="getDate()">
+        <h3 id="append_time">Official covid figures for <span id="current_time">placeholder</span>  </h3>
         <br>
         <table class="table table-bordered">
             <thead>
