@@ -16,11 +16,4 @@ window.onclick = function(event) {
   }
 };
 
-var adelaideMarker = new mapboxgl.Marker()
-  .setLngLat([138.6007, -34.9285 ])
-  .addTo(map);
-
-// mapboxResize() {
-//   map.resize();
-// }
 

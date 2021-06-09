@@ -7,3 +7,4 @@ function appendDate() {
     let appendTarget = document.getElementById("append_time").innerHTML;
     appendTarget.append(currentDate);
 }
+
