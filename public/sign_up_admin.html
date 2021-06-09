@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="stylesheets/sam.css">
 
+    <script src="javascripts/update_details.js"></script>
+
     <title>Sign-up-admin</title>
 </head>
 
@@ -110,20 +112,8 @@
               <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
           </div>
           <div class="col-md-6">
-              <label for="inputCity" class="form-label">City</label>
+              <label for="inputCity" class="form-label">Suburb</label>
               <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="col-md-6">
-              <label for="inputState" class="form-label">State</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>South Australia</option>
-                <option>New South Wales</option>
-                <option>Queensland</option>
-                <option>Tasmania</option>
-                <option>Victoria</option>
-                <option>Western Australia</option>
-              </select>
           </div>
           <div class="col-md-2">
               <label for="inputZip" class="form-label">Postcode</label>
@@ -133,15 +123,12 @@
       </div>
 
       <div class="text-right mt-3">
-          <button type="button" class="btn btn-primary">Sign up</button>&nbsp;
+          <button type="button" class="btn btn-primary" onclick="parent.location.href='admin_home.html';">Sign up</button>&nbsp;
           <button type="button" class="btn btn-default" onclick="parent.location.href='admin_manage_other_accounts.html';">Cancel</button>
       </div>
 
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
