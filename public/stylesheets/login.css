@@ -1,20 +1,27 @@
 h1 {
     font-family: 'Lato', sans-serif;
-    color: #00a3cc;
+    color: #AC3B61;
     text-align: center;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    background-color: #EEE2DC;
+}
+
+#loginForm {
+  background-color: #BAB2B5;
 }
 
 form {
-  border: 3px solid #f1f1f1;
+  border-radius: 25px;
+  border: 2px solid black;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  color: white;
 }
 
 #login {
@@ -31,7 +38,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: grey;
+  background-color: #123C69;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
