@@ -1,3 +1,5 @@
+var users = [];
+
 var user = {
                 first_name: document.getElementById('firstname').value,
                 last_name: document.getElementById('lastname').value,
@@ -61,6 +63,7 @@ var venue = {
     total_cases: 5,
     recent_visits: 10,
     contact_no: 82156911
+    }
 
     address = {
         JSON.stringify([
