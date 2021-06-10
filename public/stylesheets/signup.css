@@ -41,3 +41,21 @@ label {
     top: 50%;
     left: 50%;
 }
+
+.passwordInput {
+    margin-top: 5%;
+    text-align: left;
+}
+
+.displayBadge {
+    color: red;
+    margin-top: 5%;
+    display: none;
+    text-align :center;
+}
+
+#StrengthDisp {
+    color: red;
+}
+
+

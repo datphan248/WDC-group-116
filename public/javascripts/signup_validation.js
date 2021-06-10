@@ -11,35 +11,45 @@ function signup() {
     var suburb = document.getElementById('suburb').value;
     var postcode = document.getElementById('postcode').value;
 
-    if (isNaN(first_name) == false && isNaN(last_name) == false && isNaN(mobileNumber) == true) {
-      alert("Invalid input. Please check again.");
-      location.href = "signup.html";
-    }
+    // if (isNaN(first_name) == false && isNaN(last_name) == false && isNaN(mobileNumber) == true) {
+    //   alert("Invalid input. Please check again.");
+    //   return false;
+    // }
 
-    else if (first_name == "" || last_name == "" || date_of_birth == "" || email == "" || mobileNumber == "") {
-      alert("Signup failed. Some input fields are empty.");
-      location.href = "signup.html";
-    }
+    // else if (first_name == "" || last_name == "" || date_of_birth == "" || email == "" || mobileNumber == "") {
+    //   alert("Signup failed. Some input fields are empty.");
+    //   return false;
+    // }
 
-    else if (document.getElementById('yes').checked == true) {
-      if (venue_1 == "" || venue_2 == "" || suburb == "" || postcode == "") {
-        alert("Venue managers must fill in information about their business.");
-        location.href = "signup.html";
-      }
-    }
+    // else if (document.getElementById('yes').checked == true) {
+    //   if (venue_1 == "" || venue_2 == "" || suburb == "" || postcode == "") {
+    //     alert("Venue managers must fill in information about their business.");
+    //     return false;
+    //   }
+    // }
 
-    else if (document.getElementById('yes').checked == false && document.getElementById('no').checked == false) {
-      alert("Please confirm if you are a venue manager.");
-      location.href = "signup.html";
-    }
+    // else if (document.getElementById('yes').checked == false && document.getElementById('no').checked == false) {
+    //   alert("Please confirm if you are a venue manager.");
+    //   return false;
+    // }
 
-    else {
+
       alert("Signup successful!");
-      location.href = "user_home.html";
-    }
+      if (document.getElementById('yes').checked == true) {
+          add_venue_manager();
+      }
+      else {
+          add_user();
+      }
+
 
     return false;
 
+}
+
+function new_venue() {
+    alert("New venue registered!");
+    add_venue();
 }
 
  function passwordStrength(password) {

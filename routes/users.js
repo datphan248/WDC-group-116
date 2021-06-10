@@ -7,16 +7,15 @@ router.get('/', function(req, res, next) {
 });
 
 
-/* Google Sign-in Verification
-Commented out as we cannot implement it without our routes complete - but this code should work, it is based on Lecture 10
-*/
+//Google Sign-in Verification
+//Commented out as we cannot implement it without our routes complete - but this code should work, it is based on Lecture 10
 
 // const CLIENT_ID = '186202105193-e1gugmmcjdqd168mn3hr2a09ijnkebgg.apps.googleusercontent.com';
 
 // const {OAuth2Client} = require('google-auth-library');
-// const client = new OAuth2Client(CLIENT_ID);
+// const client = new OAuth2Client('186202105193-e1gugmmcjdqd168mn3hr2a09ijnkebgg.apps.googleusercontent.com');
 
-// router.post('/login', function(req, res, next) {
+// router.post('/google_account', function(req, res, next) {
 
 //     if ('user' in req.body) {
 
@@ -39,7 +38,7 @@ Commented out as we cannot implement it without our routes complete - but this c
 //             async function verify() {
 //             const ticket = await client.verifyIdToken({
 //                     idToken: req.body.token,
-//                     audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+//                     audience: '186202105193-e1gugmmcjdqd168mn3hr2a09ijnkebgg.apps.googleusercontent.com',  // Specify the CLIENT_ID of the app that accesses the backend
 //           // Or, if multiple clients access the backend:
 //           //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
 //             });

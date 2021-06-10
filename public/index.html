@@ -1,13 +1,49 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <title>login</title>
+
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="186202105193-e1gugmmcjdqd168mn3hr2a09ijnkebgg.apps.googleusercontent.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="javascripts/login.js"></script>
 </head>
 
-<body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+<body id="body">
+
+    <h1> COVID-19 Contact Tracing </h1>
+
+    <form id="loginForm" method="POST">
+
+        <div id="login">
+
+            <div class="valid-feedback">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="user" value="" required>
+            </div>
+
+            <div class="valid-feedback">
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            </div>
+
+            <button type="button" onclick="login()">Login</button>
+            <button type="button" onclick="window.location.href='signup.html';"> Sign Up </button>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+        </div>
+
+
+    </form>
+
+    <br> <br> <br> <br>
+    <button onClick="parent.location='admin_home.html'">Admin site</button>
 </body>
 
 </html>
